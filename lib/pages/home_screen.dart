@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mental_app/color_styles.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue[800],
+        backgroundColor: ColorStyles.primaryColor,
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
@@ -25,10 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Hi, Jared',
+                        Text(
+                          'Hi, Mark',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: ColorStyles.accentColor,
                               fontSize: 24,
                               fontWeight: FontWeight.bold),
                         ),
@@ -43,12 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     // Notification
                     Container(
                       decoration: BoxDecoration(
-                          color: Colors.blue[600],
+                          color: ColorStyles.secondaryColor,
                           borderRadius: BorderRadius.circular(12)),
                       padding: const EdgeInsets.all(12),
-                      child: const Icon(
+                      child: Icon(
                         Icons.notifications,
-                        color: Colors.white,
+                        color: ColorStyles.accentColor,
                         size: 24,
                       ),
                     )
@@ -61,18 +62,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                        color: Colors.blue[600],
+                        color: ColorStyles.secondaryColor,
                         borderRadius: BorderRadius.circular(12)),
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(
                           Icons.search,
-                          color: Colors.white,
+                          color: ColorStyles.accentColor,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text('Search', style: TextStyle(color: Colors.white))
+                        Text('Search',
+                            style: TextStyle(color: ColorStyles.accentColor))
                       ],
                     )),
                 const SizedBox(
@@ -81,18 +83,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 // How do you feel?
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
-                      'How do you feel',
+                      'How do you feel?',
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                          color: Colors.white,
+                          color: ColorStyles.accentColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     Icon(
                       Icons.more_horiz,
-                      color: Colors.white,
+                      color: ColorStyles.accentColor,
                     )
                   ],
                 ),
