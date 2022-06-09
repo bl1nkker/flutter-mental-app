@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mental_app/color_styles.dart';
+import 'package:flutter_mental_app/utils/emoticon_face.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -98,6 +99,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
+                const SizedBox(
+                  height: 25,
+                ),
+                // 4 Different emos
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    // bad
+                    EmoticonFace(
+                      emoticon: '😔',
+                      text: 'Bad',
+                    ),
+                    // fine
+                    EmoticonFace(emoticon: '😉', text: 'Fine'),
+                    // well
+                    EmoticonFace(emoticon: '😊', text: 'Well'),
+                    // excellent
+                    EmoticonFace(emoticon: '😄', text: "Excellent"),
+                  ],
+                )
               ],
             ),
           ),
